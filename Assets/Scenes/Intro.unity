@@ -4709,14 +4709,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: https://www.youtube.com/embed/KtDlWgDE9EI
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 01
-  m_ControlledAudioTrackCount: 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: https://fb.watch/f-o8YzZ9Y4/
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
@@ -6063,15 +6061,15 @@ MonoBehaviour:
       \uC99D\uAC15\uD604\uC2E4(AR), \uAC00\uC0C1\uD604\uC2E4(VR), \uAC8C\uC784 \uADF8\uB9AC\uACE0
       \uBA54\uD0C0\uBC84\uC2A4 \uB4F1 \uB2E4\uC591\uD55C \uC18C\uD504\uD2B8\uC6E8\uC5B4\uB97C
       \uAC1C\uBC1C \uD560 \uC218 \uC788\uB294 \uD504\uB85C\uADF8\uB798\uBA38 \uC591\uC131"
-    clip: {fileID: 32900000, guid: 55c22dedd8d2b9e44aac78459fab192c, type: 3}
+    clip: {fileID: 32900000, guid: 3bd835a03003bde489e8a9f44e71b02e, type: 3}
     img:
     - {fileID: 21300000, guid: 267cb17b9e8605246ae4204ea0349eab, type: 3}
     - {fileID: 21300000, guid: 64c98796b21d9e94fb25bfa6d2c8b455, type: 3}
     portfolio:
-    - {fileID: 32900000, guid: 7ac2de28f03f10340877dc4ba060fb5a, type: 3}
-    - {fileID: 32900000, guid: ad777f17b9ee9a94aa0489cd74c0ba8e, type: 3}
-    - {fileID: 32900000, guid: b6aabda5163887745bd83c529d66a62a, type: 3}
-    - {fileID: 32900000, guid: 184aeee4d81b9e744ab5cf5489c95538, type: 3}
+    - {fileID: 32900000, guid: cb673bfc579737249acbb6d60bcff50e, type: 3}
+    - {fileID: 32900000, guid: 00c51d55b729fe14099b86ea23c8de96, type: 3}
+    - {fileID: 32900000, guid: 34d7d6cc6df01864088fe4055f063553, type: 3}
+    - {fileID: 32900000, guid: 7c257913b7633284886f36832a7b7365, type: 3}
   - detailType: 3
     floor: F2
     kr: "\uB300\uD559\uBCF8\uBD80"
