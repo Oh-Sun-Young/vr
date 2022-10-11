@@ -10,12 +10,25 @@ class AreaData
 {
     public string areaName;
     public string areaNameButton;
-    public VideoClip videoClip;
+    public Material areaMaterial;
     public float x;
     public float y;
 }
 public class AreaInfo : MonoBehaviour
 {
+    public static AreaInfo instance
+    {
+        get
+        {
+            if (m_instance == null)
+            {
+                m_instance = FindObjectOfType<AreaInfo>();
+            }
+            return m_instance;
+        }
+    }
+    private static AreaInfo m_instance;
+
     [SerializeField] TextMeshProUGUI textFloor;
     [SerializeField] TextMeshProUGUI textArea;
     [SerializeField] string textFloorInfo;
@@ -25,8 +38,15 @@ public class AreaInfo : MonoBehaviour
     [SerializeField] Transform map;
     [SerializeField] AreaData[] areaData;
 
+    public List<GameObject> areaList;
+
     private void Awake()
     {
+        if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
         textFloor.text = textFloorInfo;
 
         if (mapFloor != null)
@@ -40,15 +60,19 @@ public class AreaInfo : MonoBehaviour
         {
             GameObject obj = Instantiate(prefab, map);
             obj.transform.localPosition = new Vector2(areaData[i].x, areaData[i].y);
+            areaList.Add(obj);
 
             ButtonData buttonData = obj.GetComponent<ButtonData>();
+
+            buttonData.index = i;
             buttonData.areaName = areaData[i].areaName;
-            if (areaData[i].videoClip != null) 
+
+            if (areaData[i].areaMaterial != null)
             {
-                buttonData.videoClip = areaData[i].videoClip;
+                buttonData.areaMaterial = areaData[i].areaMaterial;
             }
 
-            if(areaData[i].areaNameButton == string.Empty)
+            if (areaData[i].areaNameButton == string.Empty)
             {
                 obj.GetComponentInChildren<TextMeshProUGUI>().text = areaData[i].areaName;
             }
@@ -60,13 +84,26 @@ public class AreaInfo : MonoBehaviour
             // 첫 진입시
             if (i == 0)
             {
-                ChangeAreaName(areaData[i].areaName);
+                FloorUIManager.instance.ChangeAreaName(areaData[i].areaName);
+
+                obj.transform.GetChild(0).gameObject.SetActive(false);
+                obj.transform.GetChild(1).gameObject.SetActive(true);
+
+                if (areaData[i].areaMaterial == null)
+                {
+                    FloorUIManager.instance.BgDataEnable(false);
+                }
+                else
+                {
+                    FloorUIManager.instance.BgDataEnable(true);
+                    RenderSettings.skybox = areaData[i].areaMaterial;
+                }
+            }
+            else
+            {
+                obj.transform.GetChild(0).gameObject.SetActive(true);
+                obj.transform.GetChild(1).gameObject.SetActive(false);
             }
         }
-    }
-
-    public void ChangeAreaName(string name)
-    {
-        textArea.text = name;
     }
 }
