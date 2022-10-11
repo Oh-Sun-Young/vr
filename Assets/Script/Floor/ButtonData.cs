@@ -5,6 +5,7 @@ using UnityEngine.Video;
 
 public class ButtonData : MonoBehaviour
 {
+    public int index;
     public string areaName;
-    public VideoClip videoClip;
+    public Material areaMaterial;
 }

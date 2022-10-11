@@ -15,40 +15,40 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor/B1.unity
     guid: bdcb351723d40af4cba30c553da0e1b7
   - enabled: 1
-    path: Assets/Scenes/Floor/F1.unity
+    path: Assets/Scenes/Floor/1F.unity
     guid: 28ff9d97ffc87794a828a9d261f19bc4
   - enabled: 1
-    path: Assets/Scenes/Floor/F2.unity
+    path: Assets/Scenes/Floor/2F.unity
     guid: 8bb237c10801bad47ae5aa9455bcc90e
   - enabled: 1
-    path: Assets/Scenes/Floor/F3.unity
+    path: Assets/Scenes/Floor/3F.unity
     guid: d3e95edbedbba674d9309dd47f9c5972
   - enabled: 1
-    path: Assets/Scenes/Floor/F4.unity
+    path: Assets/Scenes/Floor/4F.unity
     guid: 9259c7a84d2482f499c2d3c24d306a2b
   - enabled: 1
-    path: Assets/Scenes/Floor/F5.unity
+    path: Assets/Scenes/Floor/5F.unity
     guid: ebfaed7f2a2f3874c8a04221a4eb6c57
   - enabled: 1
-    path: Assets/Scenes/Floor/F6.unity
+    path: Assets/Scenes/Floor/6F.unity
     guid: 9a5ddef388cd7774398911aa9911537f
   - enabled: 1
-    path: Assets/Scenes/Floor/F7.unity
+    path: Assets/Scenes/Floor/7F.unity
     guid: 30a06649a9e57c849a8b0e109712f864
   - enabled: 1
-    path: Assets/Scenes/Floor/F8.unity
+    path: Assets/Scenes/Floor/8F.unity
     guid: 0d87c62676b04a34e83be61467f1ca09
   - enabled: 1
-    path: Assets/Scenes/Floor/F8_.unity
+    path: Assets/Scenes/Floor/8F_.unity
     guid: 5f6d054e16dd78e418ab219e805188f3
   - enabled: 1
-    path: Assets/Scenes/Floor/F9.unity
+    path: Assets/Scenes/Floor/9F.unity
     guid: e668c1439d4626d43ac2b77a241666b6
   - enabled: 1
-    path: Assets/Scenes/Floor/F10.unity
+    path: Assets/Scenes/Floor/10F.unity
     guid: eb539a352f3b1db45bb8e4f5b3eb7d6f
   - enabled: 1
-    path: Assets/Scenes/Floor/F11.unity
+    path: Assets/Scenes/Floor/11F.unity
     guid: a8f03f67a91b46c43a8edc8c5f0e4a33
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 261dbfe0fc6504d429f08e138da5cea8, type: 2}

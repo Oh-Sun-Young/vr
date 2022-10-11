@@ -122,7 +122,6 @@ public class Swiper : MonoBehaviour
         now = (--now < 0) ? all - 1 : now;
         ItemEnable();
 
-        // 이동 전 위치
         transform.GetChild(prev_).gameObject.SetActive(false);
         transform.GetChild(prev).localPosition = prevPosition_;
         transform.GetChild(now).localPosition = prevPosition;
@@ -158,12 +157,22 @@ public class Swiper : MonoBehaviour
 
         while (0 != Vector3.Distance(transform.GetChild(now).localPosition, nowPosition))
         {
-            // 이동 후 위치
-            if(transform.GetChild(prev_).gameObject.activeInHierarchy) MoveTowards(transform.GetChild(prev_), prevPosition_);
+
+            /*if(transform.GetChild(prev_).gameObject.activeInHierarchy) MoveTowards(transform.GetChild(prev_), prevPosition_);
+
+            if (0.01f < Vector3.Distance(nowTransform.localScale, maxSize))
+            {
+                nowTransform.localScale += changeSize;
+                prevTransform.localScale -= changeSize;
+                nextTransform.localScale -= changeSize;
+            }
+
+            if (transform.GetChild(prev_).gameObject.activeInHierarchy) MoveTowards(transform.GetChild(prev_), prevPosition_);
+
             MoveTowards(transform.GetChild(prev), prevPosition);
             MoveTowards(transform.GetChild(now), nowPosition);
             MoveTowards(transform.GetChild(next), nextPosition);
-            if (transform.GetChild(next_).gameObject.activeInHierarchy) MoveTowards(transform.GetChild(next_), nextPosition_);
+            if (transform.GetChild(next_).gameObject.activeInHierarchy) MoveTowards(transform.GetChild(next_), nextPosition_);*/
 
             yield return null;
         }
