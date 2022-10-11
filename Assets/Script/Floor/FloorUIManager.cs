@@ -21,6 +21,8 @@ public class FloorUIManager : MonoBehaviour
     [SerializeField] GameObject controlHud;
     [SerializeField] GameObject popupHud;
     [SerializeField] TextMeshProUGUI text;
+    [SerializeField] GameObject dataNone;
+    [SerializeField] Material bgDataNone;
     private void Awake()
     {
         if (instance != this)
@@ -46,6 +48,21 @@ public class FloorUIManager : MonoBehaviour
 
     public void ChangeBg(Material bg)
     {
-        RenderSettings.skybox = bg;
+        if (bg == null)
+        {
+            RenderSettings.skybox = bgDataNone;
+            dataNone.SetActive(true);
+        }
+        else
+        {
+            RenderSettings.skybox = bg;
+            dataNone.SetActive(false);
+        }
+    }
+
+    public void DataNone()
+    {
+        RenderSettings.skybox = bgDataNone;
+        dataNone.SetActive(true);
     }
 }

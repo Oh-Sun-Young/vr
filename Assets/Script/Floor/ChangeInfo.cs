@@ -24,6 +24,17 @@ public class ChangeInfo : MonoBehaviour
         FloorUIManager.instance.ChangeBg(buttonData.areaMaterial);
     }
 
+    public void ChangeDataNone()
+    {
+        for (int i = 0; i < AreaInfo.instance.buttons.Count; i++)
+        {
+            IconEnable(AreaInfo.instance.buttons[i], ((i == buttonData.index) ? true : false));
+        }
+        FloorUIManager.instance.PopupEnable(false);
+        FloorUIManager.instance.TextArea(buttonData.areaName);
+        FloorUIManager.instance.ChangeBg(buttonData.areaMaterial);
+    }
+
     private void IconEnable(GameObject obj, bool action)
     {
         obj.transform.GetChild(0).gameObject.SetActive(!action);

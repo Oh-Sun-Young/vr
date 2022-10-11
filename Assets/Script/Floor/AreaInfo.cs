@@ -85,6 +85,20 @@ public class AreaInfo : MonoBehaviour
                 ChangeAreaName(areaData[i].areaName);
                 obj.transform.GetChild(0).gameObject.SetActive(false);
                 obj.transform.GetChild(1).gameObject.SetActive(true);
+
+                if (areaData[i].areaMaterial != null)
+                {
+                    RenderSettings.skybox = areaData[i].areaMaterial;
+                }
+                else
+                {
+                    FloorUIManager.instance.DataNone();
+                }
+            }
+            else
+            {
+                obj.transform.GetChild(0).gameObject.SetActive(true);
+                obj.transform.GetChild(1).gameObject.SetActive(false);
             }
         }
     }
