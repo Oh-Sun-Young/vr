@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b91a7a94aa4c9e4c96240e8263e50f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: F8
+  sceneName: 8F
 --- !u!114 &307899393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5938,7 +5938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - detailType: 1
-    floor: F11
+    floor: 11F
     kr: "\uD558\uB298\uACF5\uC6D0"
     en: Sky Park
     point: 
@@ -5950,7 +5950,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 5b10544f5477b0341bca334c2e123d53, type: 3}
     portfolio: []
   - detailType: 1
-    floor: F10
+    floor: 10F
     kr: "\uD734\uAC8C\uACF5\uAC04"
     en: Rest Area
     point: 
@@ -5962,7 +5962,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 677af10c250dbbf40a60c2e659c84256, type: 3}
     portfolio: []
   - detailType: 0
-    floor: F9
+    floor: 9F
     kr: "\uC804\uAE30\uC5D0\uB108\uC9C0\uC2DC\uC2A4\uD15C\uACFC"
     en: Electrical Energy System Division
     point: "\uC2E0\uC7AC\uC0DD\uC5D0\uB108\uC9C0 \uC804\uAE30\uC81C\uC5B4 \uC804\uBB38\uAC00
@@ -5978,7 +5978,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 8d87d80b72c8c7e4f8c1a4a46426a02c, type: 3}
     portfolio: []
   - detailType: 2
-    floor: F8
+    floor: 8F
     kr: "\uBC14\uC774\uC624\uC758\uC57D\uC2DC\uC2A4\uD15C\uACFC<br>\uC804\uAE30\uC5D0\uB108\uC9C0\uC2DC\uC2A4\uD15C\uACFC"
     en: '-'
     point: 
@@ -5987,7 +5987,7 @@ MonoBehaviour:
     img: []
     portfolio: []
   - detailType: 0
-    floor: F7
+    floor: 7F
     kr: "\uBC14\uC774\uC624\uC758\uC57D\uC2DC\uC2A4\uD15C\uACFC"
     en: Biomedical Systems Division
     point: "\uD3EC\uC2A4\uD2B8\uCF54\uB85C\uB098 \uC2DC\uB300\uC758 \uD575\uC2EC\uC778\uB825
@@ -6002,7 +6002,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 025a061fe1a9e20499a7640bd0d0f871, type: 3}
     portfolio: []
   - detailType: 1
-    floor: F6
+    floor: 6F
     kr: "\uC5F4\uB9B0\uACF5\uAC04"
     en: Open Space
     point: 
@@ -6014,7 +6014,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 3cc071b8c655d2c4cb3fcca498a2d99a, type: 3}
     portfolio: []
   - detailType: 0
-    floor: F5
+    floor: 5F
     kr: "3D\uC81C\uD488\uC124\uACC4\uACFC"
     en: 3D Product Design Division
     point: "\uAD6D\uB0B4 \uC720\uC77C \uAE30\uAD6C\uC124\uACC4 \uC804\uBB38\uAC00
@@ -6034,7 +6034,7 @@ MonoBehaviour:
     - {fileID: 32900000, guid: f3dfbda5523e49646bfbbf782ac64e5d, type: 3}
     - {fileID: 32900000, guid: 7cfc120e0f67f9a4f9c4f5a58c666b54, type: 3}
   - detailType: 0
-    floor: F4
+    floor: 4F
     kr: "\uB370\uC774\uD130\uBD84\uC11D\uACFC"
     en: Data Analysis Division
     point: "\uAE08\uC735IT\uBD84\uC57C \uCDE8\uC5C5\uB960 100%"
@@ -6052,7 +6052,7 @@ MonoBehaviour:
     - {fileID: 32900000, guid: 4c730c61ccd8fc84b9d34b9233137089, type: 3}
     - {fileID: 32900000, guid: f7c4a72f8db0e7e4f825803cf71570d5, type: 3}
   - detailType: 0
-    floor: F3
+    floor: 3F
     kr: "\uC99D\uAC15\uD604\uC2E4\uC2DC\uC2A4\uD15C\uACFC"
     en: Augmented Reality System
     point: "VR/AR \uAC8C\uC784 \uAC1C\uBC1C\uBD84\uC57C \uD504\uB85C\uADF8\uB798\uBA38
@@ -6071,7 +6071,7 @@ MonoBehaviour:
     - {fileID: 32900000, guid: 34d7d6cc6df01864088fe4055f063553, type: 3}
     - {fileID: 32900000, guid: 7c257913b7633284886f36832a7b7365, type: 3}
   - detailType: 3
-    floor: F2
+    floor: 2F
     kr: "\uB300\uD559\uBCF8\uBD80"
     en: University Headquarters
     point: 
@@ -6080,7 +6080,7 @@ MonoBehaviour:
     img: []
     portfolio: []
   - detailType: 3
-    floor: F1
+    floor: 1F
     kr: "\uB85C\uBE44"
     en: Lobby
     point: 
@@ -6781,7 +6781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b91a7a94aa4c9e4c96240e8263e50f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: F8_
+  sceneName: 8F_
 --- !u!114 &1199212412
 MonoBehaviour:
   m_ObjectHideFlags: 0
