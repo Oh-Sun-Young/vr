@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FloorUIManager : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class FloorUIManager : MonoBehaviour
 
     [SerializeField] GameObject controlHud;
     [SerializeField] GameObject popupHud;
+    [SerializeField] TextMeshProUGUI text;
+    [SerializeField] GameObject dataNone;
+    [SerializeField] Material bgDataNone;
     private void Awake()
     {
         if (instance != this)
@@ -35,5 +39,30 @@ public class FloorUIManager : MonoBehaviour
     {
         controlHud.SetActive(!active);
         popupHud.SetActive(active);
+    }
+
+    public void TextArea(string area)
+    {
+        text.text = area;
+    }
+
+    public void ChangeBg(Material bg)
+    {
+        if (bg == null)
+        {
+            RenderSettings.skybox = bgDataNone;
+            dataNone.SetActive(true);
+        }
+        else
+        {
+            RenderSettings.skybox = bg;
+            dataNone.SetActive(false);
+        }
+    }
+
+    public void DataNone()
+    {
+        RenderSettings.skybox = bgDataNone;
+        dataNone.SetActive(true);
     }
 }
