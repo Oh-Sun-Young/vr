@@ -2171,21 +2171,11 @@ MonoBehaviour:
   prefab: {fileID: 3283649395329827775, guid: 57b09d3411fe99d41b691419eeca0583, type: 3}
   map: {fileID: 1760277654}
   areaData:
-  - areaName: "\uC6D0\uC7A5\uC2E4"
+  - areaName: "\uB300\uD559\uBCF8\uBD80"
     areaNameButton: 
     areaMaterial: {fileID: 0}
-    x: -436
-    y: 229
-  - areaName: "\uAD50\uD559\uCC98\uC7A5\uC2E4"
-    areaNameButton: 
-    areaMaterial: {fileID: 0}
-    x: -97
-    y: 346
-  - areaName: "\uD589\uC815\uCC98\uC7A5\uC2E4"
-    areaNameButton: 
-    areaMaterial: {fileID: 0}
-    x: 35
-    y: 385
+    x: 37
+    y: 153
   - areaName: "\uB300\uD68C\uC758\uC2E4"
     areaNameButton: 
     areaMaterial: {fileID: 0}
