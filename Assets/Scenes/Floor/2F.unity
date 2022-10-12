@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.52918535, g: 0.5377279, b: 0.51633644, a: 1}
+  m_IndirectSpecularColor: {r: 0.52871704, g: 0.53767556, b: 0.5158679, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2173,12 +2173,12 @@ MonoBehaviour:
   areaData:
   - areaName: "\uB300\uD559\uBCF8\uBD80"
     areaNameButton: 
-    areaMaterial: {fileID: 0}
+    areaMaterial: {fileID: 2100000, guid: 12e5106ce56680145a308982e89e1b86, type: 2}
     x: 37
     y: 153
   - areaName: "\uB300\uD68C\uC758\uC2E4"
     areaNameButton: 
-    areaMaterial: {fileID: 0}
+    areaMaterial: {fileID: 2100000, guid: b5314226dda4d1c4aa8c6779156bcda9, type: 2}
     x: -419
     y: -16
   buttons: []

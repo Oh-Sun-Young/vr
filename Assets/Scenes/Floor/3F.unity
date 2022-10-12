@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.52918535, g: 0.5377279, b: 0.51633644, a: 1}
+  m_IndirectSpecularColor: {r: 0.52871704, g: 0.53767556, b: 0.5158679, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2279,17 +2279,17 @@ MonoBehaviour:
   areaData:
   - areaName: "\uC778\uD130\uB809\uC158 \uC2A4\uD29C\uB514\uC624"
     areaNameButton: "\uC778\uD130\uB809\uC158<br>\uC2A4\uD29C\uB514\uC624"
-    areaMaterial: {fileID: 2100000, guid: 3085f1d2050c6244d8fc213e7d6945cd, type: 2}
+    areaMaterial: {fileID: 2100000, guid: d7b12dd3cda29f647a558692e52c59af, type: 2}
     x: -100
     y: 100
   - areaName: "\uAC8C\uC784\uC18C\uD504\uD2B8\uC6E8\uC5B4 \uC2E4\uC2B5\uC2E4"
     areaNameButton: "\uAC8C\uC784\uC18C\uD504\uD2B8\uC6E8\uC5B4<br>\uC2E4\uC2B5\uC2E4"
-    areaMaterial: {fileID: 0}
+    areaMaterial: {fileID: 2100000, guid: a00d1660cec00bf4fb47fb8b2616b27b, type: 2}
     x: -230
     y: 320
   - areaName: "MR\uC2A4\uD29C\uB514\uC624"
     areaNameButton: 
-    areaMaterial: {fileID: 2100000, guid: 2aae63c71879dad4b84aad58642cb5e3, type: 2}
+    areaMaterial: {fileID: 2100000, guid: 77af163a4aa5fd64ea1d4a253a9546b8, type: 2}
     x: 246
     y: 219
   buttons: []

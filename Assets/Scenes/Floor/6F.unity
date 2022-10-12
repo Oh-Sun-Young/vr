@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.52918535, g: 0.5377279, b: 0.51633644, a: 1}
+  m_IndirectSpecularColor: {r: 0.52871704, g: 0.53767556, b: 0.5158679, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2173,27 +2173,17 @@ MonoBehaviour:
   areaData:
   - areaName: STUDY CAFE
     areaNameButton: STUDY<br>CAFE
-    areaMaterial: {fileID: 0}
+    areaMaterial: {fileID: 2100000, guid: 3546acb03b5308e4ab374ccd757a7d5d, type: 2}
     x: -367
     y: 74
-  - areaName: GROUP ROOM
-    areaNameButton: GROUP<br>ROOM
-    areaMaterial: {fileID: 0}
-    x: -425
-    y: -144
-  - areaName: "\uC18C\uAC15\uC758\uC2E4"
-    areaNameButton: 
-    areaMaterial: {fileID: 0}
-    x: -50
-    y: 108
   - areaName: "\uB300\uAC15\uC758\uC2E4"
     areaNameButton: 
-    areaMaterial: {fileID: 0}
+    areaMaterial: {fileID: 2100000, guid: 20b646fe455835144b735c805e9b6d42, type: 2}
     x: 246
     y: 219
   - areaName: "\uCCB4\uB825\uB2E8\uB828\uC2E4"
     areaNameButton: 
-    areaMaterial: {fileID: 0}
+    areaMaterial: {fileID: 2100000, guid: e6ad44fc8273d204fa853ca838e6a290, type: 2}
     x: -126
     y: 325
   buttons: []
