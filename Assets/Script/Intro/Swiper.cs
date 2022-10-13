@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -7,28 +7,28 @@ using UnityEngine.UIElements;
 using UnityEngine.Video;
 using UnityEngine.XR.ARSubsystems;
 /*
- * Âü°í
+ * ì°¸ê³ 
  * - How to make swipe snap menu in Unity3d : https://www.youtube.com/watch?v=xBxvqxsxdR8
  */
 
 public class Swiper : MonoBehaviour
 {
-    public int prev_; // ÀÌÀüÀÇ ÀÌÀü
-    public int prev; // ÀÌÀü
-    public int now = 0; // ÇöÀç
-    public int next; // ´ÙÀ½
-    public int next_; // ´ÙÀ½ÀÇ ´ÙÀ½
-    public int all; // ÀüÃ¼
+    public int prev_; // ì´ì „ì˜ ì´ì „
+    public int prev; // ì´ì „
+    public int now = 0; // í˜„ì¬
+    public int next; // ë‹¤ìŒ
+    public int next_; // ë‹¤ìŒì˜ ë‹¤ìŒ
+    public int all; // ì „ì²´
 
-    // ¿µ»ó
-    [Header("¿µ»ó Texture")]
+    // ì˜ìƒ
+    [Header("ì˜ìƒ Texture")]
     [SerializeField] RenderTexture nowTexture;
     [SerializeField] RenderTexture prevTexture;
     [SerializeField] RenderTexture prevTexture_;
     [SerializeField] RenderTexture nextTexture;
     [SerializeField] RenderTexture nextTexture_;
 
-    [Header("¿µ»ó Material")]
+    [Header("ì˜ìƒ Material")]
     [SerializeField] Material nowMaterial;
     [SerializeField] Material prevMaterial;
     [SerializeField] Material prevMaterial_;
@@ -66,7 +66,7 @@ public class Swiper : MonoBehaviour
 
             video.GetComponent<VideoPlayer>().SetDirectAudioMute(0, (i == now) ? false : true);
 
-            transform.GetChild(i).gameObject.SetActive((i == now || i == prev || i == next || i == prev_ || i == next_) ? true : false);
+            transform.GetChild(i).gameObject.SetActive((i == now) ? true : false);
         }
     }
 

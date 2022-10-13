@@ -486,7 +486,7 @@ RectTransform:
   - {fileID: 876890805}
   - {fileID: 1210545358}
   m_Father: {fileID: 1049132551}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1237,7 +1237,7 @@ RectTransform:
   m_Children:
   - {fileID: 1307218600}
   m_Father: {fileID: 1049132551}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -5573,8 +5573,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 821002967}
-  - {fileID: 254883948}
   - {fileID: 71123009}
+  - {fileID: 254883948}
   - {fileID: 238909920}
   m_Father: {fileID: 1459101587}
   m_RootOrder: 1
@@ -7675,7 +7675,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1377103781}
   - component: {fileID: 1377103782}
-  - component: {fileID: 1377103783}
   m_Layer: 5
   m_Name: SwiperContent
   m_TagString: Untagged
@@ -7701,7 +7700,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1000, y: -400}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377103782
 MonoBehaviour:
@@ -7715,17 +7714,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d915339c995c3f4fa3cbd0a948c2fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: 0
   prev_: 0
   prev: 0
   now: 0
   next: 0
   next_: 0
   all: 0
-  width: 0
-  height: 0
-  y: 0
-  y_: 0
   nowTexture: {fileID: 8400000, guid: 6196ca1d9890c7046b37abb3527e9da6, type: 2}
   prevTexture: {fileID: 8400000, guid: 9583a94cc2a28dd47b7e5560a978e613, type: 2}
   prevTexture_: {fileID: 8400000, guid: a79d2701d6c758f49af4f804e815496b, type: 2}
@@ -7736,32 +7730,6 @@ MonoBehaviour:
   prevMaterial_: {fileID: 2100000, guid: 33bc6ee759efd4c4e8b34835d44878d4, type: 2}
   nextMaterial: {fileID: 2100000, guid: 03e7220d0e84fa746a160420c1320c54, type: 2}
   nextMaterial_: {fileID: 2100000, guid: a786303d26f4ae447a59d79995cc1c33, type: 2}
---- !u!61 &1377103783
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377103780}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1280, y: 612}
-  m_EdgeRadius: 0
 --- !u!1 &1390610776
 GameObject:
   m_ObjectHideFlags: 0
