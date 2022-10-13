@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -6,60 +6,34 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using UnityEngine.Video;
 using UnityEngine.XR.ARSubsystems;
+/*
+ * ì°¸ê³ 
+ * - How to make swipe snap menu in Unity3d : https://www.youtube.com/watch?v=xBxvqxsxdR8
+ */
 
 public class Swiper : MonoBehaviour
 {
-    public float test;
+    public int prev_; // ì´ì „ì˜ ì´ì „
+    public int prev; // ì´ì „
+    public int now = 0; // í˜„ì¬
+    public int next; // ë‹¤ìŒ
+    public int next_; // ë‹¤ìŒì˜ ë‹¤ìŒ
+    public int all; // ì „ì²´
 
-    public int prev_; // ÀÌÀüÀÇ ÀÌÀü
-    public int prev; // ÀÌÀü
-    public int now = 0; // ÇöÀç
-    public int next; // ´ÙÀ½
-    public int next_; // ´ÙÀ½ÀÇ ´ÙÀ½
-    public int all; // ÀüÃ¼
-
-    private float width;
-
-    private float speed = 1500;
-
-    // À§Ä¡
-    private Vector3 nowPosition;
-    private Vector3 prevPosition;
-    private Vector3 prevPosition_;
-    private Vector3 nextPosition;
-    private Vector3 nextPosition_;
-
-    // Å©±â
-    private Vector3 realSize = new Vector3(1280, 680, 1);
-    private Vector3 minSize = new Vector3(0.75f, 0.75f, 0.75f);
-    private Vector3 maxSize = new Vector3(1, 1, 1);
-    private Vector3 changeSize = new Vector3(0.0016f, 0.0016f, 0.0016f);
-
-    // ¿µ»ó
-    [Header("¿µ»ó Texture")]
+    // ì˜ìƒ
+    [Header("ì˜ìƒ Texture")]
     [SerializeField] RenderTexture nowTexture;
     [SerializeField] RenderTexture prevTexture;
     [SerializeField] RenderTexture prevTexture_;
     [SerializeField] RenderTexture nextTexture;
     [SerializeField] RenderTexture nextTexture_;
 
-    [Header("¿µ»ó Material")]
+    [Header("ì˜ìƒ Material")]
     [SerializeField] Material nowMaterial;
     [SerializeField] Material prevMaterial;
     [SerializeField] Material prevMaterial_;
     [SerializeField] Material nextMaterial;
     [SerializeField] Material nextMaterial_;
-
-    private void Awake()
-    {
-        width = transform.GetComponent<BoxCollider2D>().size.x;
-
-        nowPosition = new Vector3(transform.localPosition.x, 0, 0);
-        prevPosition = new Vector3(transform.localPosition.x - width, 0, 0);
-        prevPosition_ = new Vector3(transform.localPosition.x - width * 2, 0, 0);
-        nextPosition = new Vector3(transform.localPosition.x + width, 0, 0);
-        nextPosition_ = new Vector3(transform.localPosition.x + width * 2, 0, 0);
-    }
 
     public void Initialization()
     {
@@ -69,18 +43,6 @@ public class Swiper : MonoBehaviour
         if(0 < all)
         {
             ItemEnable();
-
-            // À§Ä¡
-            transform.GetChild(prev_).localPosition = prevPosition_;
-            transform.GetChild(prev).localPosition = prevPosition;
-            transform.GetChild(now).localPosition = nowPosition;
-            transform.GetChild(next).localPosition = nextPosition;
-            transform.GetChild(next_).localPosition = nextPosition_;
-
-            for (int i = 0; i < all; i++)
-            {
-                transform.GetChild(i).Find("Video").transform.localScale = ((i == now) ? maxSize : minSize);
-            }
         }
     }
 
@@ -104,7 +66,7 @@ public class Swiper : MonoBehaviour
 
             video.GetComponent<VideoPlayer>().SetDirectAudioMute(0, (i == now) ? false : true);
 
-            transform.GetChild(i).gameObject.SetActive((i == now || i == prev || i == next || i == prev_ || i == next_) ? true : false);
+            transform.GetChild(i).gameObject.SetActive((i == now) ? true : false);
         }
     }
 
@@ -121,93 +83,10 @@ public class Swiper : MonoBehaviour
     {
         now = (--now < 0) ? all - 1 : now;
         ItemEnable();
-
-        transform.GetChild(prev_).gameObject.SetActive(false);
-        transform.GetChild(prev).localPosition = prevPosition_;
-        transform.GetChild(now).localPosition = prevPosition;
-        transform.GetChild(next).localPosition = nowPosition;
-        transform.GetChild(next_).localPosition = nextPosition;
-
-        StartCoroutine("SwiperMove");
-        StartCoroutine("SwiperScale");
     }
     public void NextButton()
     {
         now = (all <= ++now) ? 0 : now;
         ItemEnable();
-
-        // ÀÌµ¿ Àü À§Ä¡
-        transform.GetChild(prev_).localPosition = prevPosition;
-        transform.GetChild(prev).localPosition = nowPosition;
-        transform.GetChild(now).localPosition = nextPosition;
-        transform.GetChild(next).localPosition = nextPosition_;
-        transform.GetChild(next_).gameObject.SetActive(false);
-
-        StartCoroutine("SwiperMove");
-        StartCoroutine("SwiperScale");
-    }
-
-    private void MoveTowards(Transform transform, Vector3 destination)
-    {
-        transform.localPosition = Vector3.MoveTowards(transform.localPosition, destination, Time.deltaTime * speed);
-    }
-
-    IEnumerator SwiperMove()
-    {
-
-        while (0 != Vector3.Distance(transform.GetChild(now).localPosition, nowPosition))
-        {
-
-            /*if(transform.GetChild(prev_).gameObject.activeInHierarchy) MoveTowards(transform.GetChild(prev_), prevPosition_);
-
-            if (0.01f < Vector3.Distance(nowTransform.localScale, maxSize))
-            {
-                nowTransform.localScale += changeSize;
-                prevTransform.localScale -= changeSize;
-                nextTransform.localScale -= changeSize;
-            }
-
-            if (transform.GetChild(prev_).gameObject.activeInHierarchy) MoveTowards(transform.GetChild(prev_), prevPosition_);
-
-            MoveTowards(transform.GetChild(prev), prevPosition);
-            MoveTowards(transform.GetChild(now), nowPosition);
-            MoveTowards(transform.GetChild(next), nextPosition);
-            if (transform.GetChild(next_).gameObject.activeInHierarchy) MoveTowards(transform.GetChild(next_), nextPosition_);*/
-
-            yield return null;
-        }
-
-        if (transform.GetChild(prev_).gameObject.activeInHierarchy)
-        {
-            transform.GetChild(prev_).gameObject.SetActive(false);
-        }
-        if (transform.GetChild(next_).gameObject.activeInHierarchy)
-        {
-            transform.GetChild(next_).gameObject.SetActive(false);
-        }
-
-        VideoPlayer video = transform.GetChild(now).Find("Video").GetComponent<VideoPlayer>();
-        video.Stop();
-        video.Play();
-    }
-
-    IEnumerator SwiperScale()
-    {
-        Transform prevTransform = transform.GetChild(prev).Find("Video");
-        Transform nowTransform = transform.GetChild(now).Find("Video");
-        Transform nextTransform = transform.GetChild(next).Find("Video");
-
-        while (0.01f < Vector3.Distance(nowTransform.localScale, maxSize))
-        {
-            nowTransform.localScale += changeSize;
-            prevTransform.localScale -= changeSize;
-            nextTransform.localScale -= changeSize;
-            yield return null;
-        }
-
-        nowTransform.localScale = maxSize;
-        prevTransform.localScale = minSize;
-        nextTransform.localScale = minSize;
-
     }
 }

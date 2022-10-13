@@ -1,12 +1,12 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 /*
- * Âü°í »çÇ×
- * - UnityEngine.Input ¿À·ù ¼ö½Å : https://www.reddit.com/r/Unity3D/comments/lt7gng/recieving_error_for_unityengineinput/
- * - [Unity] ¿ÀºêÁ§Æ®ÀÇ È¸Àü¿¡ ´ëÇÏ¿©(Rotation, Quaternion, Euler) : https://killu.tistory.com/12
- * - À¯´ÏÆ¼¿¡¼­ ¿ÀÀÏ·¯°¢À» »ç¿ëÇÒ¶§ ÁÖÀÇÇÒÁ¡(transform.eulerangles) : https://learnandcreate.tistory.com/10
+ * ì°¸ê³  ì‚¬í•­
+ * - UnityEngine.Input ì˜¤ë¥˜ ìˆ˜ì‹  : https://www.reddit.com/r/Unity3D/comments/lt7gng/recieving_error_for_unityengineinput/
+ * - [Unity] ì˜¤ë¸Œì íŠ¸ì˜ íšŒì „ì— ëŒ€í•˜ì—¬(Rotation, Quaternion, Euler) : https://killu.tistory.com/12
+ * - ìœ ë‹ˆí‹°ì—ì„œ ì˜¤ì¼ëŸ¬ê°ì„ ì‚¬ìš©í• ë•Œ ì£¼ì˜í• ì (transform.eulerangles) : https://learnandcreate.tistory.com/10
  */
 public class CameraRotation : MonoBehaviour
 {
