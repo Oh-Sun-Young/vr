@@ -2191,6 +2191,11 @@ MonoBehaviour:
     areaMaterial: {fileID: 0}
     x: 246
     y: 219
+  - areaName: "\uC11C\uBC84\uC2E4"
+    areaNameButton: 
+    areaMaterial: {fileID: 0}
+    x: 40
+    y: 400
   buttons: []
 --- !u!1 &1088602032
 GameObject:
